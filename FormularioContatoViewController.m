@@ -55,7 +55,12 @@
 
 -(IBAction)selecionaFoto:(id)sender{
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        
+        UIActionSheet *sheet = [[UIActionSheet alloc]
+                                initWithTitle:@"Escolha sua foto"
+                                delegate:self
+                                cancelButtonTitle:@"Cancelar"
+                                destructiveButtonTitle:nil
+                                otherButtonTitles:@"Tirar foto", @"Escolher da Biblioteca",nil];
     }
     else{
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
@@ -64,6 +69,24 @@
         picker.delegate = self;
         [self presentModalViewController:picker animated:YES];
     }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    switch (buttonIndex) {
+        case 0:
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            break;
+        case 1:
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            break;
+            
+        default:
+            break;
+    }
+    [self presentModalViewController:picker animated:YES];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{

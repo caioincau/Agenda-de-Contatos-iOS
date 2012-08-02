@@ -19,6 +19,9 @@
 		2B3DF24215C6F8370069D5BD /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DF24015C6F8370069D5BD /* FormularioContatoViewController.m */; };
 		2B3DF24315C6F8370069D5BD /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DF24115C6F8370069D5BD /* FormularioContatoViewController.xib */; };
 		2BA9394815C80BC800727EF0 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA9394715C80BC800727EF0 /* ListaContatosViewController.m */; };
+		2BC1C56E15CABB3600A4150E /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1C56C15CABB3600A4150E /* ContatosNoMapaViewController.m */; };
+		2BC1C56F15CABB3600A4150E /* ContatosNoMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C56D15CABB3600A4150E /* ContatosNoMapaViewController.xib */; };
+		2BC1C57215CABB7300A4150E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC1C57115CABB7300A4150E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,10 @@
 		2B6E968C15C9711F00631A21 /* ListaContatosProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListaContatosProtocol.h; sourceTree = "<group>"; };
 		2BA9394615C80BC800727EF0 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		2BA9394715C80BC800727EF0 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
+		2BC1C56B15CABB3600A4150E /* ContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatosNoMapaViewController.h; sourceTree = "<group>"; };
+		2BC1C56C15CABB3600A4150E /* ContatosNoMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatosNoMapaViewController.m; sourceTree = "<group>"; };
+		2BC1C56D15CABB3600A4150E /* ContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosNoMapaViewController.xib; sourceTree = "<group>"; };
+		2BC1C57115CABB7300A4150E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC1C57215CABB7300A4150E /* MapKit.framework in Frameworks */,
 				2B2DC2D515C9A9BD00F6A4A1 /* Twitter.framework in Frameworks */,
 				2B2DC2D215C9A24A00F6A4A1 /* MessageUI.framework in Frameworks */,
 				2B3DF22915C6F7BE0069D5BD /* UIKit.framework in Frameworks */,
@@ -63,6 +71,7 @@
 		2B3DF21915C6F7BE0069D5BD = {
 			isa = PBXGroup;
 			children = (
+				2BC1C57115CABB7300A4150E /* MapKit.framework */,
 				2B2DC2D415C9A9BD00F6A4A1 /* Twitter.framework */,
 				2B2DC2D115C9A24A00F6A4A1 /* MessageUI.framework */,
 				2B6E968C15C9711F00631A21 /* ListaContatosProtocol.h */,
@@ -72,6 +81,9 @@
 				2B37C7DC15C7134B00A0DF6A /* Contato.m */,
 				2B3DF23F15C6F8370069D5BD /* FormularioContatoViewController.h */,
 				2B3DF24015C6F8370069D5BD /* FormularioContatoViewController.m */,
+				2BC1C56B15CABB3600A4150E /* ContatosNoMapaViewController.h */,
+				2BC1C56C15CABB3600A4150E /* ContatosNoMapaViewController.m */,
+				2BC1C56D15CABB3600A4150E /* ContatosNoMapaViewController.xib */,
 				2B3DF24115C6F8370069D5BD /* FormularioContatoViewController.xib */,
 				2B3DF22E15C6F7BE0069D5BD /* CaelumIP67 */,
 				2B3DF22715C6F7BE0069D5BD /* Frameworks */,
@@ -171,6 +183,7 @@
 			files = (
 				2B3DF23315C6F7BE0069D5BD /* InfoPlist.strings in Resources */,
 				2B3DF24315C6F8370069D5BD /* FormularioContatoViewController.xib in Resources */,
+				2BC1C56F15CABB3600A4150E /* ContatosNoMapaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +199,7 @@
 				2B3DF24215C6F8370069D5BD /* FormularioContatoViewController.m in Sources */,
 				2B37C7DD15C7134B00A0DF6A /* Contato.m in Sources */,
 				2BA9394815C80BC800727EF0 /* ListaContatosViewController.m in Sources */,
+				2BC1C56E15CABB3600A4150E /* ContatosNoMapaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

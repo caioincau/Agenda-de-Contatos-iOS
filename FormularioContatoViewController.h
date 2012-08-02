@@ -10,7 +10,7 @@
 #import "Contato.h"
 #import "ListaContatosProtocol.h"
 
-@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
 
 
 @property(nonatomic,strong) NSMutableArray *contatos;
