@@ -28,9 +28,10 @@
     ListaContatosViewController *lista = [[ListaContatosViewController alloc]init];
     lista.contatos = self.contatos;
     ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc]init];
+    UINavigationController *mapaNavigation = [[UINavigationController alloc]initWithRootViewController:contatosMapa];
     UITabBarController *tabBarController = [[UITabBarController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lista];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:nav,contatosMapa,nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:nav,mapaNavigation,nil];
     
     self.window.rootViewController = tabBarController;
     // Override point for customization after application launch.

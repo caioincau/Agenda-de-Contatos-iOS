@@ -26,6 +26,7 @@
 		2BC1C57815CAC40E00A4150E /* lista-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */; };
 		2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57515CAC40E00A4150E /* mapa-contatos.png */; };
 		2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */; };
+		2BC1C57C15CACE0C00A4150E /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos@2x.png"; sourceTree = "<group>"; };
 		2BC1C57515CAC40E00A4150E /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
 		2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos@2x.png"; sourceTree = "<group>"; };
+		2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		2B3DF21915C6F7BE0069D5BD = {
 			isa = PBXGroup;
 			children = (
+				2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */,
 				2BC1C57315CAC40E00A4150E /* lista-contatos.png */,
 				2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */,
 				2BC1C57515CAC40E00A4150E /* mapa-contatos.png */,
@@ -200,6 +203,7 @@
 				2BC1C57815CAC40E00A4150E /* lista-contatos@2x.png in Resources */,
 				2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */,
 				2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */,
+				2BC1C57C15CACE0C00A4150E /* Vila Mariana.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
