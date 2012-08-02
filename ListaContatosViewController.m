@@ -16,7 +16,9 @@
     self = [super init];
     if (self) {
         UIBarButtonItem *botaoDireito = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm)];
-        self.tabBarController.title = @"Contatos";
+        UIImage *imagemTabItem = [UIImage imageNamed:@"lista-contatos.png"];
+        UITabBarItem *tabItem =[[UITabBarItem alloc]initWithTitle:@"Contatos" image:imagemTabItem tag:0];
+        self.tabBarItem = tabItem;
         self.navigationItem.title=@"Contatos";
         self.navigationItem.rightBarButtonItem = botaoDireito;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;

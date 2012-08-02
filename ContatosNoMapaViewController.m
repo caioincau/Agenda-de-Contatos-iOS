@@ -14,6 +14,17 @@
 
 @implementation ContatosNoMapaViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *imagemTabItem = [UIImage imageNamed:@"mapa-contatos.png"];
+        UITabBarItem *tabItem = [[UITabBarItem alloc] initWithTitle:@"Mapa" image:imagemTabItem tag:0];
+        self.tabBarItem = tabItem;
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

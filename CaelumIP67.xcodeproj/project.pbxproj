@@ -22,6 +22,10 @@
 		2BC1C56E15CABB3600A4150E /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1C56C15CABB3600A4150E /* ContatosNoMapaViewController.m */; };
 		2BC1C56F15CABB3600A4150E /* ContatosNoMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C56D15CABB3600A4150E /* ContatosNoMapaViewController.xib */; };
 		2BC1C57215CABB7300A4150E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC1C57115CABB7300A4150E /* MapKit.framework */; };
+		2BC1C57715CAC40E00A4150E /* lista-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57315CAC40E00A4150E /* lista-contatos.png */; };
+		2BC1C57815CAC40E00A4150E /* lista-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */; };
+		2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57515CAC40E00A4150E /* mapa-contatos.png */; };
+		2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		2BC1C56C15CABB3600A4150E /* ContatosNoMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatosNoMapaViewController.m; sourceTree = "<group>"; };
 		2BC1C56D15CABB3600A4150E /* ContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosNoMapaViewController.xib; sourceTree = "<group>"; };
 		2BC1C57115CABB7300A4150E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2BC1C57315CAC40E00A4150E /* lista-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos.png"; sourceTree = "<group>"; };
+		2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos@2x.png"; sourceTree = "<group>"; };
+		2BC1C57515CAC40E00A4150E /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
+		2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		2B3DF21915C6F7BE0069D5BD = {
 			isa = PBXGroup;
 			children = (
+				2BC1C57315CAC40E00A4150E /* lista-contatos.png */,
+				2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */,
+				2BC1C57515CAC40E00A4150E /* mapa-contatos.png */,
+				2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */,
 				2BC1C57115CABB7300A4150E /* MapKit.framework */,
 				2B2DC2D415C9A9BD00F6A4A1 /* Twitter.framework */,
 				2B2DC2D115C9A24A00F6A4A1 /* MessageUI.framework */,
@@ -184,6 +196,10 @@
 				2B3DF23315C6F7BE0069D5BD /* InfoPlist.strings in Resources */,
 				2B3DF24315C6F8370069D5BD /* FormularioContatoViewController.xib in Resources */,
 				2BC1C56F15CABB3600A4150E /* ContatosNoMapaViewController.xib in Resources */,
+				2BC1C57715CAC40E00A4150E /* lista-contatos.png in Resources */,
+				2BC1C57815CAC40E00A4150E /* lista-contatos@2x.png in Resources */,
+				2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */,
+				2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
