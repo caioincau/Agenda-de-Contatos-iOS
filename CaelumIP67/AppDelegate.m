@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FormularioContatoViewController.h"
 #import "ListaContatosViewController.h"
+#import "ContatosNoMapaViewController.h"
 @implementation AppDelegate
 
 @synthesize contatos,arquivoContatos;
@@ -26,8 +27,12 @@
 //    FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
     ListaContatosViewController *lista = [[ListaContatosViewController alloc]init];
     lista.contatos = self.contatos;
+    ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc]init];
+    UITabBarController *tabBarController = [[UITabBarController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lista];
-    self.window.rootViewController = nav;
+    tabBarController.viewControllers = [NSArray arrayWithObjects:nav,contatosMapa,nil];
+    
+    self.window.rootViewController = tabBarController;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

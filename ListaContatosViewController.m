@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         UIBarButtonItem *botaoDireito = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm)];
+        self.tabBarController.title = @"Contatos";
         self.navigationItem.title=@"Contatos";
         self.navigationItem.rightBarButtonItem = botaoDireito;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
