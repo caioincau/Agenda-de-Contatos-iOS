@@ -9,7 +9,7 @@
 #import "Contato.h"
 
 @implementation Contato
-@synthesize email,endereco,nome,site,telefone,twitter,foto;
+@synthesize email,endereco,nome,site,telefone,twitter,foto,longitude,latitude;
 
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
@@ -22,6 +22,8 @@
         [self setSite:[aDecoder decodeObjectForKey:@"site"]];
         [self setTwitter:[aDecoder decodeObjectForKey:@"twitter"]];
         [self setFoto:[aDecoder decodeObjectForKey:@"foto"]];
+        [self setLatitude:[aDecoder decodeObjectForKey:@"latitude"]];
+        [self setLongitude:[aDecoder decodeObjectForKey:@"longitude"]];
         
     }
     return self;
@@ -35,5 +37,7 @@
     [aCoder encodeObject:site forKey:@"site"];
     [aCoder encodeObject:twitter forKey:@"twitter"];
     [aCoder encodeObject:foto forKey:@"foto"];
+    [aCoder encodeObject:latitude forKey:@"latitude"];
+    [aCoder encodeObject:longitude forKey:@"longitude"];
 }
 @end

@@ -32,4 +32,5 @@
 -(id)initWithContato:(Contato *)contato;
 -(IBAction)escondeTeclado:(UITextView *)sender;
 -(IBAction)selecionaFoto:(id)sender;
+-(IBAction)buscarCordenadas:(id)sender;
 @end

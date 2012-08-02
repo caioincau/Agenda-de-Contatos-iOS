@@ -16,6 +16,8 @@
 @property(strong) NSString *endereco;
 @property(strong) NSString *site;
 @property(strong) NSString *twitter;
+@property(strong) NSNumber *latitude;
+@property(strong) NSNumber *longitude;
 @property(strong) UIImage *foto;
 
 

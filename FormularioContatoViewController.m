@@ -8,7 +8,7 @@
 
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
-
+#import <CoreLocation/CoreLocation.h>
 @interface FormularioContatoViewController ()
 
 @end
@@ -120,6 +120,8 @@
     contato.endereco = campoEndereco.text;
     contato.site = campoSite.text;
     contato.twitter = campoTwitter.text;
+    contato.latitude = [NSNumber numberWithFloat:[campoLatitude.text floatValue]];
+    contato.longitude = [NSNumber numberWithFloat:[campoLongitude.text floatValue]];
     return contato;
 //    NSLog(@"contato com nome: %i",[self.contatos count]);
 //    NSMutableDictionary *dadosDoContato=[[NSMutableDictionary alloc]init];
@@ -150,6 +152,20 @@
     [campoTwitter setText:@""];
 }
 
+-(IBAction)buscarCordenadas:(id)sender{
+    CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+    [geocoder geocodeAddressString:campoEndereco.text completionHandler:
+     ^(NSArray *resultados,NSError *error){
+         if (error==nil && [resultados count]>0) {
+             CLPlacemark *resultado = [resultados objectAtIndex:0];
+             CLLocationCoordinate2D coordenada = resultado.location.coordinate;
+             campoLatitude.text = [NSString stringWithFormat:@"%f",coordenada.latitude];
+             campoLongitude.text = [NSString stringWithFormat:@"%f",coordenada.longitude];
+             
+         }
+     }];
+}
+
 //-(IBAction)escondeTeclado:(UITextView *)sender{
 //    [sender resignFirstResponder];
 //    UIScrollView *scroll = (UIScrollView*) self.view;
@@ -172,6 +188,8 @@
         campoEndereco.text = contato.endereco;
         campoSite.text = contato.site;
         campoTwitter.text = contato.twitter;
+        campoLongitude.text = [contato.longitude stringValue];
+        campoLatitude.text = [contato.latitude stringValue];
         if(contato.foto){
             [botaoFoto setImage:contato.foto forState:UIControlStateNormal];
         }

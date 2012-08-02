@@ -27,6 +27,9 @@
 		2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57515CAC40E00A4150E /* mapa-contatos.png */; };
 		2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */; };
 		2BC1C57C15CACE0C00A4150E /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */; };
+		2BC1C57F15CB024800A4150E /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57D15CB024800A4150E /* gps.png */; };
+		2BC1C58015CB024800A4150E /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1C57E15CB024800A4150E /* gps@2x.png */; };
+		2BC1C58215CB02B700A4150E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC1C58115CB02B700A4150E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		2BC1C57515CAC40E00A4150E /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
 		2BC1C57615CAC40E00A4150E /* mapa-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos@2x.png"; sourceTree = "<group>"; };
 		2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
+		2BC1C57D15CB024800A4150E /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
+		2BC1C57E15CB024800A4150E /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps@2x.png"; sourceTree = "<group>"; };
+		2BC1C58115CB02B700A4150E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC1C58215CB02B700A4150E /* CoreLocation.framework in Frameworks */,
 				2BC1C57215CABB7300A4150E /* MapKit.framework in Frameworks */,
 				2B2DC2D515C9A9BD00F6A4A1 /* Twitter.framework in Frameworks */,
 				2B2DC2D215C9A24A00F6A4A1 /* MessageUI.framework in Frameworks */,
@@ -81,6 +88,9 @@
 		2B3DF21915C6F7BE0069D5BD = {
 			isa = PBXGroup;
 			children = (
+				2BC1C58115CB02B700A4150E /* CoreLocation.framework */,
+				2BC1C57D15CB024800A4150E /* gps.png */,
+				2BC1C57E15CB024800A4150E /* gps@2x.png */,
 				2BC1C57B15CACE0C00A4150E /* Vila Mariana.gpx */,
 				2BC1C57315CAC40E00A4150E /* lista-contatos.png */,
 				2BC1C57415CAC40E00A4150E /* lista-contatos@2x.png */,
@@ -204,6 +214,8 @@
 				2BC1C57915CAC40E00A4150E /* mapa-contatos.png in Resources */,
 				2BC1C57A15CAC40E00A4150E /* mapa-contatos@2x.png in Resources */,
 				2BC1C57C15CACE0C00A4150E /* Vila Mariana.gpx in Resources */,
+				2BC1C57F15CB024800A4150E /* gps.png in Resources */,
+				2BC1C58015CB024800A4150E /* gps@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
