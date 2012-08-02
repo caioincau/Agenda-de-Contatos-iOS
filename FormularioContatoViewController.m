@@ -150,12 +150,12 @@
     [campoTwitter setText:@""];
 }
 
--(IBAction)escondeTeclado:(UITextView *)sender{
-    [sender resignFirstResponder];
-    UIScrollView *scroll = (UIScrollView*) self.view;
-    CGPoint ponto = CGPointMake(-30.0, -30.0);
-    [scroll setContentOffset:ponto];
-}
+//-(IBAction)escondeTeclado:(UITextView *)sender{
+//    [sender resignFirstResponder];
+//    UIScrollView *scroll = (UIScrollView*) self.view;
+//    CGPoint ponto = CGPointMake(-30.0, -30.0);
+//    [scroll setContentOffset:ponto];
+//}
 
 -(void) escondeFormulario {
     [self dismissModalViewControllerAnimated:YES];
