@@ -165,12 +165,27 @@
     Contato *contato = [self.contatos objectAtIndex:indexPath.row];
     cell.textLabel.text = contato.nome;
     cell.detailTextLabel.text = contato.email;
-    
+    cell.imageView.image = resizeImageToSize(contato.foto,CGSizeMake(40.0, 40.0));
     return cell;
     
 }
-
-
+UIImage* resizeImageToSize(UIImage* image, CGSize size)
+{
+    UIGraphicsBeginImageContext(size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    //Account for flipped coordspace
+    CGContextTranslateCTM(ctx, 0.0, size.height);
+    CGContextScaleCTM(ctx, 1.0, -1.0);
+    
+    CGContextDrawImage(ctx,CGRectMake(0.0f, 0.0f, size.width, size.height), image.CGImage);
+    
+    UIImage* scaled = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return scaled;
+}
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
     return YES;

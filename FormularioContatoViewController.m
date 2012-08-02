@@ -55,7 +55,7 @@
 
 -(IBAction)selecionaFoto:(id)sender{
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-    
+        
     }
     else{
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
@@ -75,6 +75,9 @@
 -(Contato *)pegaDadosDoFormulario{
     if (!self.contato){
         contato = [[Contato alloc]init];
+    }
+    if(botaoFoto.imageView.image){
+        contato.foto = botaoFoto.imageView.image;
     }
     contato.nome = campoNome.text;
     contato.telefone = campoTelefone.text;
@@ -133,6 +136,9 @@
         campoEndereco.text = contato.endereco;
         campoSite.text = contato.site;
         campoTwitter.text = contato.twitter;
+        if(contato.foto){
+            [botaoFoto setImage:contato.foto forState:UIControlStateNormal];
+        }
     }
 }
 @end
