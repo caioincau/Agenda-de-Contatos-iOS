@@ -26,6 +26,7 @@
     return self;
 }
 
+
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
     Contato *c = [self.contatos objectAtIndex:sourceIndexPath.row];
     [contatos removeObjectAtIndex:sourceIndexPath.row];
@@ -190,8 +191,8 @@ UIImage* resizeImageToSize(UIImage* image, CGSize size)
     return scaled;
 }
 
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    return YES;
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 -(void) exibeForm {

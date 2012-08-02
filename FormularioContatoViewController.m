@@ -79,6 +79,10 @@
     }
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
 -(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     UIImagePickerController *picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
@@ -148,10 +152,6 @@
 
 -(IBAction)escondeTeclado:(UITextView *)sender{
     [sender resignFirstResponder];
-}
-
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    return YES;
 }
 
 -(void) escondeFormulario {
