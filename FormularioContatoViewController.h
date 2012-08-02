@@ -21,6 +21,9 @@
 @property(nonatomic,weak) IBOutlet UITextField *campoEndereco;
 @property(nonatomic,weak) IBOutlet UITextField *campoSite;
 @property(nonatomic,weak) IBOutlet UITextField *campoTwitter;
+@property(nonatomic,weak) IBOutlet UITextField *campoLatitude;
+@property(nonatomic,weak) IBOutlet UITextField *campoLongitude;
+
 @property(nonatomic,weak) IBOutlet UIButton *botaoFoto;
 @property UITextField *campoAtual;
 @property id<ListaContatosProtocol> delegate;

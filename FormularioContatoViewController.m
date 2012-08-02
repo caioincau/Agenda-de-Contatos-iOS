@@ -43,7 +43,7 @@
 }
 
 
-@synthesize campoEmail,campoEndereco,campoNome,campoSite,campoTelefone,contatos,contato,delegate,campoTwitter,botaoFoto,campoAtual;
+@synthesize campoEmail,campoEndereco,campoNome,campoSite,campoTelefone,contatos,contato,delegate,campoTwitter,botaoFoto,campoAtual,campoLatitude,campoLongitude;
 
 -(void)altera{
     Contato *contatoAtualizado = [self pegaDadosDoFormulario];
@@ -152,6 +152,9 @@
 
 -(IBAction)escondeTeclado:(UITextView *)sender{
     [sender resignFirstResponder];
+    UIScrollView *scroll = (UIScrollView*) self.view;
+    CGPoint ponto = CGPointMake(-30.0, -30.0);
+    [scroll setContentOffset:ponto];
 }
 
 -(void) escondeFormulario {
@@ -192,10 +195,16 @@
         CGFloat alturaEscondida = tamanhoDoTeclado.height+self.navigationController.navigationBar.frame.size.height;
         CGRect tamanhoDaTela = scroll.frame;
         tamanhoDaTela.size.height -=alturaEscondida;
+        CGSize scrollContentSize = scroll.contentSize;
+        scrollContentSize.height+=alturaEscondida;
+        [scroll setContentSize:scrollContentSize];
         BOOL campoAtualSumiu = !(CGRectContainsPoint(tamanhoDaTela, campoAtual.frame.origin));
         if(campoAtualSumiu){
             CGFloat tamanhoAdicional = tamanhoDoTeclado.height - self.navigationController.navigationBar.frame.size.height;
             CGPoint pontoVisivel = CGPointMake(0.0, campoAtual.frame.origin.y-tamanhoAdicional);
+            CGSize scrollContentSize = scroll.contentSize;
+            scrollContentSize.height+=alturaEscondida;
+            [scroll setContentSize:scrollContentSize];
             [scroll setContentOffset:pontoVisivel animated:YES];
         }
     
