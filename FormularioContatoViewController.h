@@ -10,7 +10,7 @@
 #import "Contato.h"
 #import "ListaContatosProtocol.h"
 
-@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
+@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate,UITextFieldDelegate>
 
 
 @property(nonatomic,strong) NSMutableArray *contatos;
@@ -22,6 +22,7 @@
 @property(nonatomic,weak) IBOutlet UITextField *campoSite;
 @property(nonatomic,weak) IBOutlet UITextField *campoTwitter;
 @property(nonatomic,weak) IBOutlet UIButton *botaoFoto;
+@property UITextField *campoAtual;
 @property id<ListaContatosProtocol> delegate;
 
 -(Contato *)pegaDadosDoFormulario;

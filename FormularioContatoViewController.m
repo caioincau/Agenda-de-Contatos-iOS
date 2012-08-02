@@ -43,7 +43,7 @@
 }
 
 
-@synthesize campoEmail,campoEndereco,campoNome,campoSite,campoTelefone,contatos,contato,delegate,campoTwitter,botaoFoto;
+@synthesize campoEmail,campoEndereco,campoNome,campoSite,campoTelefone,contatos,contato,delegate,campoTwitter,botaoFoto,campoAtual;
 
 -(void)altera{
     Contato *contatoAtualizado = [self pegaDadosDoFormulario];
@@ -51,6 +51,14 @@
     if(self.delegate){
         [self.delegate contatoAtualizado:contatoAtualizado];
     }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    campoAtual = textField;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    campoAtual=nil;
 }
 
 -(IBAction)selecionaFoto:(id)sender{
@@ -152,6 +160,8 @@
 
 
 -(void) viewDidLoad{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tecladoApareceu:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tecladoSumiu:) name:UIKeyboardDidHideNotification object:nil];
     if(self.contato){
         campoNome.text = contato.nome;
         campoTelefone.text = contato.telefone;
@@ -162,6 +172,33 @@
         if(contato.foto){
             [botaoFoto setImage:contato.foto forState:UIControlStateNormal];
         }
+    }
+}
+
+
+-(void)tecladoSumiu:(NSNotification *)notification{
+
+}
+
+-(void)tecladoApareceu:(NSNotification *)notification{
+    NSDictionary *info = [notification userInfo];
+    CGRect areaDoTeclado =[[info objectForKey:UIKeyboardFrameBeginUserInfoKey]CGRectValue];
+    CGSize tamanhoDoTeclado = areaDoTeclado.size;
+    UIScrollView *scroll = (UIScrollView*) self.view;
+    UIEdgeInsets margens = UIEdgeInsetsMake(0.0, 0.0, tamanhoDoTeclado.height, 0.0);
+    scroll.contentInset = margens;
+    scroll.scrollIndicatorInsets=margens;
+    if(campoAtual){
+        CGFloat alturaEscondida = tamanhoDoTeclado.height+self.navigationController.navigationBar.frame.size.height;
+        CGRect tamanhoDaTela = scroll.frame;
+        tamanhoDaTela.size.height -=alturaEscondida;
+        BOOL campoAtualSumiu = !(CGRectContainsPoint(tamanhoDaTela, campoAtual.frame.origin));
+        if(campoAtualSumiu){
+            CGFloat tamanhoAdicional = tamanhoDoTeclado.height - self.navigationController.navigationBar.frame.size.height;
+            CGPoint pontoVisivel = CGPointMake(0.0, campoAtual.frame.origin.y-tamanhoAdicional);
+            [scroll setContentOffset:pontoVisivel animated:YES];
+        }
+    
     }
 }
 @end

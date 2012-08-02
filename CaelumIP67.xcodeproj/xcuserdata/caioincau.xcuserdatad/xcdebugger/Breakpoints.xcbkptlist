@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FormularioContatoViewController.m"
-         timestampString = "365607811.455061"
+         timestampString = "365620403.193061"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-selecionaFoto:"
          landmarkType = "5">
       </FileBreakpoint>
