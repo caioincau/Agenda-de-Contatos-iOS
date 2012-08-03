@@ -49,7 +49,6 @@
         Contato *contato = view.annotation;
         FormularioContatoViewController *form = [[FormularioContatoViewController alloc]initWithContato:contato];
         [self.navigationController pushViewController:form animated:YES];
-        NSLog(@"NOME :%@",contato.nome);
     }
 
 }
@@ -77,6 +76,12 @@
         imagemContato.image = contato.foto;
         pino.leftCalloutAccessoryView = imagemContato;
         pino.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    else{
+        UIImageView *imagemContato = [[UIImageView alloc]initWithFrame:CGRectMake(0,0,32,32)];
+        UIImage *imagemTabItem = [UIImage imageNamed:@"lista-contatos.png"];
+        imagemContato.image = imagemTabItem;
+        pino.leftCalloutAccessoryView = imagemContato;
     }
     return pino;
     
