@@ -12,5 +12,5 @@
 @interface ContatosNoMapaViewController : UIViewController
 
 @property(weak,nonatomic) IBOutlet MKMapView *mapa;
-
+@property(weak,nonatomic) NSMutableArray *contatos;
 @end

@@ -28,6 +28,7 @@
     ListaContatosViewController *lista = [[ListaContatosViewController alloc]init];
     lista.contatos = self.contatos;
     ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc]init];
+    contatosMapa.contatos = contatos;
     UINavigationController *mapaNavigation = [[UINavigationController alloc]initWithRootViewController:contatosMapa];
     UITabBarController *tabBarController = [[UITabBarController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lista];

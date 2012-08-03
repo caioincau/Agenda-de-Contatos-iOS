@@ -15,7 +15,7 @@
 
 @implementation ContatosNoMapaViewController
 
-@synthesize mapa;
+@synthesize mapa,contatos;
 - (id)init
 {
     self = [super init];
@@ -55,5 +55,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.mapa addAnnotations:contatos];
+}
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.mapa removeAnnotations:contatos];
+}
 @end

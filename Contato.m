@@ -11,6 +11,10 @@
 @implementation Contato
 @synthesize email,endereco,nome,site,telefone,twitter,foto,longitude,latitude;
 
+-(CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([latitude doubleValue], [longitude doubleValue]);
+}
+
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
