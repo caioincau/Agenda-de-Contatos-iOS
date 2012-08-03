@@ -10,15 +10,15 @@
 #import <MapKit/MKAnnotation.h>
 @interface Contato : NSObject <NSCoding,MKAnnotation>
 
-@property(strong) NSString *nome;
-@property(strong) NSString *telefone;
-@property(strong) NSString *email;
-@property(strong) NSString *endereco;
-@property(strong) NSString *site;
-@property(strong) NSString *twitter;
-@property(strong) NSNumber *latitude;
-@property(strong) NSNumber *longitude;
-@property(strong) UIImage *foto;
+@property(nonatomic,strong) NSString *nome;
+@property(nonatomic,strong) NSString *telefone;
+@property(nonatomic,strong) NSString *email;
+@property(nonatomic,strong) NSString *endereco;
+@property(nonatomic,strong) NSString *site;
+@property(nonatomic,strong) NSString *twitter;
+@property(nonatomic,strong) NSNumber *latitude;
+@property(nonatomic,strong) NSNumber *longitude;
+@property(nonatomic,strong) UIImage *foto;
 
 
 @end

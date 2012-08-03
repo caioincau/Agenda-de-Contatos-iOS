@@ -15,6 +15,13 @@
     return CLLocationCoordinate2DMake([latitude doubleValue], [longitude doubleValue]);
 }
 
+-(NSString *)title{
+    return nome;
+}
+
+-(NSString *)subtitle{
+    return email;
+}
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
